@@ -34,4 +34,6 @@ A website for student to meet their daily need to keep track of their notes ,sea
 ```
 
 ## Demo
+![alt text](<Screenshot 2025-04-07 105945.png>)
+![alt text](image-1.png)
 <video controls src="Recording 2025-04-07 105328.mp4" title="Demo"></video>

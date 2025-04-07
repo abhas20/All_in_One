@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                     <FaInstagram />
                 </Link>
             </div>
-            <p className='text-xs'>© 2023 Your Company. All rights reserved.</p>
+            <p className='text-xs'>© 2025 All rights reserved.</p>
         </footer>
     );
 };

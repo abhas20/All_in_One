@@ -3,8 +3,11 @@
 import {getArtist, getTopArtists, handleAuth } from '@/api/api';
 import SongCard from '@/components/SongCard';
 import { Button } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react';
+
+import ClipLoader from "react-spinners/ClipLoader";
 import React, { startTransition, useEffect, useState, useTransition } from 'react'
+
+
 
 export default function page() {
   const [artist,setArtist]=useState([]);
@@ -29,7 +32,7 @@ export default function page() {
   })
   }, []);
   if(pending){
-    return <div className='flex justify-center items-center h-screen'><h1 className='text-3xl text-center pb-3 font-[rog] font-bold mb-10'><Loader2/></h1></div>
+    return <div className='flex justify-center items-center h-screen'><h1 className='text-3xl text-center pb-3 font-[rog] font-bold mb-10'><ClipLoader color={"#123abc"}/></h1></div>
   }
   
   const showArtist = async () => {
@@ -74,8 +77,8 @@ export default function page() {
          <div className='container flex justify-center items-center flex-wrap lg:[&_div]:w-1/4 md:[&_div]:1/3 [&_div]:1/2 gap-8  m-auto mb-40'>
          <SongCard artist={artist}/>
          <div className='flex flex-col justify-center items-center'>
-        <h2 className='text-2xl'>Discover Your Top 8 Artists:</h2><br/>
-        <Button onClick={topArtist}>Top Your Artist</Button>
+        <h2 className='text-2xl'>Discover Your Top 10 Artists:</h2><br/>
+        <Button onClick={topArtist}>Your Top Artist</Button>
          </div>
          </div>
          

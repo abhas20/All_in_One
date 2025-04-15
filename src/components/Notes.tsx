@@ -13,8 +13,8 @@ const NotesPage: React.FC = () => {
   };
 
   const handleSave = () => {
-    setSavedText(text); 
-    showToast("Saved Successfully",{description:"Your text has been saved successfully!"});
+    setSavedText(text.trim()); 
+    if(text.trim()) showToast("Saved Successfully",{description:"Your text has been saved successfully!"});
     setText('');
   };
   const upper = () => {
